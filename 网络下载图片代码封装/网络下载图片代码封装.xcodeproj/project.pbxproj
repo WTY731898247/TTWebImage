@@ -23,6 +23,7 @@
 		80479D8C1EFD4090000EFBA0 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80479D821EFD4090000EFBA0 /* NSObject+YYModel.m */; };
 		80479D8D1EFD4090000EFBA0 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 80479D841EFD4090000EFBA0 /* YYClassInfo.m */; };
 		80479D901EFD40EC000EFBA0 /* TTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80479D8F1EFD40EC000EFBA0 /* TTModel.m */; };
+		80479D941EFD51C4000EFBA0 /* TTWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 80479D931EFD51C4000EFBA0 /* TTWebImageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		80479D851EFD4090000EFBA0 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		80479D8E1EFD40EC000EFBA0 /* TTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTModel.h; sourceTree = "<group>"; };
 		80479D8F1EFD40EC000EFBA0 /* TTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTModel.m; sourceTree = "<group>"; };
+		80479D921EFD51C4000EFBA0 /* TTWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWebImageManager.h; sourceTree = "<group>"; };
+		80479D931EFD51C4000EFBA0 /* TTWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWebImageManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				80479D6E1EFD3910000EFBA0 /* CostomOperation */,
+				80479D911EFD517F000EFBA0 /* WebImageManager */,
 				80479D5A1EFD3858000EFBA0 /* AppDelegate.h */,
 				80479D5B1EFD3858000EFBA0 /* AppDelegate.m */,
 				80479D5D1EFD3858000EFBA0 /* ViewController.h */,
@@ -155,6 +159,15 @@
 				80479D851EFD4090000EFBA0 /* YYModel.h */,
 			);
 			path = YYModel;
+			sourceTree = "<group>";
+		};
+		80479D911EFD517F000EFBA0 /* WebImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				80479D921EFD51C4000EFBA0 /* TTWebImageManager.h */,
+				80479D931EFD51C4000EFBA0 /* TTWebImageManager.m */,
+			);
+			name = WebImageManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +253,7 @@
 				80479D871EFD4090000EFBA0 /* AFNetworkReachabilityManager.m in Sources */,
 				80479D8C1EFD4090000EFBA0 /* NSObject+YYModel.m in Sources */,
 				80479D591EFD3858000EFBA0 /* main.m in Sources */,
+				80479D941EFD51C4000EFBA0 /* TTWebImageManager.m in Sources */,
 				80479D891EFD4090000EFBA0 /* AFURLRequestSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +411,7 @@
 				80479D6D1EFD3858000EFBA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

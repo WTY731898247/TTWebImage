@@ -38,16 +38,15 @@
 -(void)main{
     
     NSURL *url=[NSURL URLWithString:self.urlString];
-    
     NSData *data=[NSData dataWithContentsOfURL:url];
-    
-
-    
     //耗时操作
     UIImage *image=[UIImage imageWithData:data];
     
+    
+    
     //把image回调出去进行UI操作,主线程
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        
         if(_useImageBlock){
             _useImageBlock(image);
         }

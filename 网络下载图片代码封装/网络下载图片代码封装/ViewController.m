@@ -7,14 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "TTCostomOperation.h"
+#import "TTWebImageManager.h"
 #import "AFNetworking.h"
 #import "YYModel.h"
 #import "TTModel.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *TTImageView;
 
-@property(nonatomic,strong)NSOperationQueue *queue;
 
 @property(nonatomic,strong)NSArray *dataArray;
 
@@ -25,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.queue=[[NSOperationQueue alloc] init];
     
     [self loadData];
 
@@ -64,17 +62,11 @@
     //随机获取数组中的模型
     TTModel *model=self.dataArray[arc4random_uniform((uint32_t)self.dataArray.count)];
     
-    
-    //实例化自定义operation
-    TTCostomOperation *operation=[TTCostomOperation loadImageWithUrlString:model.icon useImageBlock:^(UIImage *image) {
+    [[TTWebImageManager sharedManager] loadImageWithUrlString:model.icon completionBlock:^(UIImage *image) {
         self.TTImageView.image=image;
     }];
-    
-    
-    
-    [self.queue addOperation:operation];
 
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
